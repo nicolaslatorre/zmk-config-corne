@@ -1,5 +1,4 @@
-#includ "niklat.dtsi"
-
+#include "niklat.dtsi"
 
 $default_transform {
 	col-offset = <6>;
