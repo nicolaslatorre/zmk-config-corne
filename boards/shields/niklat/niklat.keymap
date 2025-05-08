@@ -16,6 +16,12 @@
 };
 
 / {
+    chosen {
+        zephyr,display = &nice_view;
+    };
+};
+
+/ {
         keymap {
                 compatible = "zmk,keymap";
 
