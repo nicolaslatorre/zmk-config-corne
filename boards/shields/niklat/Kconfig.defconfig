@@ -2,3 +2,5 @@ if SHIELD_NIKLAT
 
 config ZMK_KEYBOARD_NAME
 	default "NikLat KBD"
+
+endif
