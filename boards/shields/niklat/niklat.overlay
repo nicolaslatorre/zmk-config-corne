@@ -1,6 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
-nice_view_spi: &spi0 {
+&nice_view_spi {
 	mosi-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
 	sck-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
 	cs-gpios = <&pro_micro 12 GPIO_ACTIVE_HIGH>;
@@ -13,6 +13,12 @@ nice_view_spi: &spi0 {
         	width = <160>;
         	height = <68>;
     	};
+};
+
+/ {
+	chosen {
+		zephyr,display = &nice_view;
+	};
 };
 
 / {
