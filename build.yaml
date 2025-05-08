@@ -20,4 +20,4 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: some_native_shield nice_view
+    shield: niklat nice_view
