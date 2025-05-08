@@ -8,23 +8,6 @@
     };
 
 
-    nice_view_spi: &spi0 {
-        compatible = "nordic,nrf-spim";
-        status = "okay";
-        pinctrl-0 = <&spi0_default>;
-        pinctrl-1 = <&spi0_sleep>;
-        pinctrl-names = "default", "sleep";
-
-        cs-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
-
-        nice_view: ls0xx@0 {
-            compatible = "sharp,ls0xx";
-            spi-max-frequency = <1000000>;
-            reg = <0>;
-            width = <160>;
-            height = <68>;
-        };
-    };
 
     default_kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
@@ -72,4 +55,22 @@
 			low-power-enable;
     		};
 	};
+};
+
+nice_view_spi: &spi0 {
+	compatible = "nordic,nrf-spim";
+        status = "okay";
+        pinctrl-0 = <&spi0_default>;
+        pinctrl-1 = <&spi0_sleep>;
+        pinctrl-names = "default", "sleep";
+
+        cs-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
+
+        nice_view: ls0xx@0 {
+            compatible = "sharp,ls0xx";
+            spi-max-frequency = <1000000>;
+            reg = <0>;
+            width = <160>;
+            height = <68>;
+        };
 };
