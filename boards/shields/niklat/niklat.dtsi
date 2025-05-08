@@ -1,4 +1,3 @@
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <zephyr/dt-bindings/gpio/gpio.h>
 
@@ -55,6 +54,5 @@ nice_view_spi: &spi0 {
         pinctrl-0 = <&spi0_default>;
         pinctrl-1 = <&spi0_sleep>;
         pinctrl-names = "default", "sleep";
-
         cs-gpios = <&gpio1 6 GPIO_ACTIVE_HIGH>;
 };
