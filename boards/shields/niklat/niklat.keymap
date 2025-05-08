@@ -54,3 +54,9 @@
                 };
         };
 };
+
+&nice_view_spi {
+	mosi-gpios = <&pro_micro 9 GPIO_ACTIVE_HIGH>;
+	sck-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>;
+	cs-gpios = <&pro_micro 12 GPIO_ACTIVE_HIGH>;
+};
