@@ -23,5 +23,3 @@ include:
     shield: niklat_left nice_view
   - board: nice_nano_v2
     shield: niklat_right nice_view
-  - board: nice_nano_v2
-    shield: settings_reset
