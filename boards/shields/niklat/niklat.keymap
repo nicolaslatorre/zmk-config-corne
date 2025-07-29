@@ -9,20 +9,32 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+
+	behaviors {
+		hm: homerow_mods {
+			compatible = "zmk,behavior-hold-tap";
+			label = "HOMEROW_MODS";
+			#binding-cells = <2>;
+			tapping-terms-ms = <200>;
+			quick-tap-ms = <0>;
+			flavor = "tap-preferred";
+			bindings = <&kp>, <&kp>;
+		};
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BSPC |
-// | CTRL |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |     |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  BSPC |    |
+// |     |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |   O   |    |
+// |     |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  ESC  |    |
+//                   | TAB | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI &kp BSPC
-   &kp LCTRL &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &trans &kp Q       &kp W      &kp F      &kp P        &kp B   &kp J &kp L         &kp U         &kp Y        &kp BSPC       &trans
+   &trans &hm LCTRL A &hm LALT R &hm LGUI S &hm LSHIFT T &kp G   &kp M &hm RSHIFT N  &hm RGUI E    &hm RALT I   &hm RCTRL O    &trans
+   &trans &kp Z       &kp X      &kp C      &kp D        &kp V   &kp K &kp H         &kp COMMA     &kp DOT      &kp ESC        &trans
+                                 &kp TAB &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
@@ -41,14 +53,14 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  ~  |  !  |  @  |  #  |  $  |   |  '  |  -  |  (  |  )  |     | BSPC |
+// |  TAB |  ~  |  !  |  @  |  #  |  $  |   |  '  |  -  |  (  |  )  |  ;  | BSPC |
 // | CTRL |  `  |  %  |  ^  |  &  |  *  |   |  "  |  _  |  [  |  ]  |  ?  |      |
-// | SHFT |  /  |  \  |  <  |  >  |  :  |   |  =  |  +  |  {  |  }  | "|" |      |
+// | SHFT |  /  |  \  |  <  |  >  | "|" |   |  =  |  +  |  {  |  }  |  :  |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &kp TILDE &kp EXCL  &kp AT    &kp HASH &kp DLLR    &kp SQT   &kp MINUS &kp LPAR  &kp RPAR &trans    &kp BSPC
+   &kp TAB   &kp TILDE &kp EXCL  &kp AT    &kp HASH &kp DLLR    &kp SQT   &kp MINUS &kp LPAR  &kp RPAR &kp SEMI  &kp BSPC
    &kp LCTRL &kp GRAVE &kp PRCNT &kp CARET &kp AMPS &kp ASTRK   &kp DQT   &kp UNDER &kp LBKT  &kp RBKT &kp QMARK &trans
-   &kp LSHFT &kp FSLH  &kp BSLH  &kp LT    &kp GT   &kp COLON   &kp EQUAL &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE  &trans
+   &kp LSHFT &kp FSLH  &kp BSLH  &kp LT    &kp GT   &kp PIPE    &kp EQUAL &kp PLUS  &kp LBRC  &kp RBRC &kp COLON &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
