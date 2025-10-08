@@ -35,7 +35,7 @@
    &trans &kp Q       &kp W      &kp F      &kp P        &kp B   &kp J &kp L         &kp U         &kp Y        &kp BSPC       &trans
    &trans &hm LCTRL A &hm LALT R &hm LGUI S &hm LSHIFT T &kp G   &kp M &hm RSHIFT N  &hm RGUI E    &hm RALT I   &hm RCTRL O    &trans
    &trans &kp Z       &kp X      &kp C      &kp D        &kp V   &kp K &kp H         &kp COMMA     &kp DOT      &kp ESC        &trans
-                                 &kp TAB &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                                 &kp TAB &mo 1 &kp SPACE   &kp RET &mo 2 &kt LSHIFT
                         >;
                 };
                 lower_layer {
@@ -48,7 +48,7 @@
    &kp TAB    &trans  &kp N1 &kp N2 &kp N3 &kp MINUS   &kp PRCNT    &kp ASTRK    &kp FSLH     &kp EQUAL    &trans       &kp BSPC
    &trans     &kp DOT &kp N4 &kp N5 &kp N6 &kp PLUS    &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans       &trans
    &kp LSHFT  &trans  &kp N7 &kp N8 &kp N9 &kp N0      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-                            &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                            &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kt LSHIFT
                         >;
                 };
 
@@ -62,7 +62,7 @@
    &kp TAB   &kp TILDE &kp EXCL  &kp AT    &kp HASH &kp DLLR    &kp SQT   &kp MINUS &kp LPAR  &kp RPAR &kp SEMI  &kp BSPC
    &kp LCTRL &kp GRAVE &kp PRCNT &kp CARET &kp AMPS &kp ASTRK   &kp DQT   &kp UNDER &kp LBKT  &kp RBKT &kp QMARK &trans
    &kp LSHFT &kp FSLH  &kp BSLH  &kp LT    &kp GT   &kp PIPE    &kp EQUAL &kp PLUS  &kp LBRC  &kp RBRC &kp COLON &trans
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kt LSHIFT
                         >;
                 };
         };
